@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Spanish" />
+    <meta name="keywords" content="finanzas, jovenes, app, ahorrar, invertir, gastos, fintech, educacion financiera" />
+    <title>Alto - Tu plataforma financiera</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Gestiona tus finanzas desde joven con Alto. Controla tus gastos, ahorra e invierte con una plataforma diseñada para ti.">
+    <meta property="og:title" content="Alto - Tu plataforma financiera" />
+    <meta property="og:description" content="Una nueva forma de entender el dinero para la nueva generación." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="URL-DE-TU-IMAGEN.png" />
+    <meta property="og:url" content="https://tusitio.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- Tipografía y rendimiento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos y scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script async src="https://tally.so/widgets/embed.js"></script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Efecto Parallax para fondo */
+      .parallax-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(38, 38, 44, 0.8), rgba(0, 0, 0, 0.5));
+        background-size: cover;
+        z-index: -1;
+      }
+
+      /* Movimiento del texto */
+      .parallax-text {
+        position: relative;
+        z-index: 1;
+        transform: translateZ(0);
+      }
+
+      .parallax-text h1, .parallax-text p {
+        transform: translateZ(0);
+      }
+
+      /* Estilos para el resto de la página */
+      .animate-fade-slide-up {
+        animation: fadeSlideUp 1.8s ease-out forwards;
+      }
+
+      @keyframes fadeSlideUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .parallax {
+        perspective: 1px;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      .parallax-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: 0 0;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#0F172A] text-[#F1F5F9] font-sans">
+
+    <!-- INTRO NUEVA -->
+    <div id="intro" class="fixed inset-0 bg-[#0F172A] flex items-center justify-center z-[9999]">
+      <h1 class="text-white text-2xl sm:text-3xl font-semibold opacity-0 animate-fade-slide-up">
+        Bienvenido a Alto, la nueva forma de entender tus finanzas
+      </h1>
+    </div>
+
+    <!-- NAVBAR STICKY -->
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-[#0F172A] bg-opacity-80 backdrop-blur transition duration-300 z-50">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold text-white">Alto</div>
+        <nav class="space-x-6 hidden md:block">
+          <a href="#info" class="text-gray-300 hover:text-white transition">¿Qué es?</a>
+          <a href="#beneficios" class="text-gray-300 hover:text-white transition">Beneficios</a>
+          <a href="#contacto" class="text-gray-300 hover:text-white transition">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO CON EFECTO PARALLAX -->
+    <section class="parallax relative min-h-screen flex flex-col justify-center items-center text-center p-6 pt-32 overflow-hidden" data-aos="fade-up">
+      <div class="parallax-background" id="parallax-background"></div>
+      <div class="relative z-10 parallax-text">
+        <h1 class="text-5xl font-bold mb-4">Controla tu dinero. Sin complicaciones.</h1>
+        <p class="text-xl text-gray-300 mb-6">Una nueva forma de entender tus finanzas.</p>
+        <a href="#info" class="bg-[#6366F1] hover:bg-[#4F46E5] text-white py-3 px-6 rounded-full transition">
+          Descubre cómo
+        </a>
+      </div>
+    </section>
+
+    <!-- INFO -->
+    <section id="info" class="max-w-4xl mx-auto py-20 px-6" data-aos="fade-right">
+      <h2 class="text-3xl font-semibold mb-4">¿Qué es Alto?</h2>
+      <p class="text-gray-300 text-lg">
+        Una plataforma hecha por y para jóvenes. Aprende a gestionar tus gastos, ahorra, invierte y prepárate para la vida real.
+      </p>
+    </section>
+
+    <!-- BENEFICIOS REDISEÑADOS -->
+    <section id="beneficios" class="max-w-6xl mx-auto py-20 px-6" data-aos="fade-up">
+      <h2 class="text-3xl font-semibold text-center mb-12">¿Por qué usar Alto?</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="p-6 bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl transition-transform hover:scale-105">
+          <h3 class="text-xl font-semibold mb-2">Gastos en tiempo real</h3>
+          <p class="text-gray-300 text-sm">Controla tu dinero al instante con paneles visuales y alertas inteligentes.</p>
+        </div>
+        <div class="p-6 bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl transition-transform hover:scale-105">
+          <h3 class="text-xl font-semibold mb-2">Ahorro automático</h3>
+          <p class="text-gray-300 text-sm">Reta a tus hábitos con metas semanales y reglas que funcionan.</p>
+        </div>
+        <div class="p-6 bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl transition-transform hover:scale-105">
+          <h3 class="text-xl font-semibold mb-2">Inversión sencilla</h3>
+          <p class="text-gray-300 text-sm">Accede a productos pensados para ti, sin complicaciones ni letras pequeñas.</p>
+        </div>
+        <div class="p-6 bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl transition-transform hover:scale-105">
+          <h3 class="text-xl font-semibold mb-2">Diseño joven y útil</h3>
+          <p class="text-gray-300 text-sm">No más apps grises. Alto es intuitiva, moderna y te habla en tu idioma.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="bg-gradient-to-r from-[#6366F1] to-[#06B6D4] py-20 px-6 text-center text-white" data-aos="zoom-in">
+      <h2 class="text-3xl font-bold mb-4">+1000 jóvenes ya están cambiando su forma de ver el dinero</h2>
+      <p class="text-lg mb-6">¿Y tú? ¿Te vas a quedar fuera?</p>
+      <a href="#formulario" class="bg-white text-[#0F172A] font-semibold py-3 px-6 rounded-full hover:bg-gray-100 transition">
+        Quiero formar parte
+      </a>
+    </section>
+
+    <!-- FORMULARIO TALLY REDISEÑADO -->
+    <section id="formulario" class="bg-[#0F172A] py-20 px-6" data-aos="fade-up">
+      <div class="max-w-xl mx-auto text-center bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-8">
+        <h2 class="text-3xl font-semibold mb-4 text-white">Apúntate a la beta privada</h2>
+        <p class="text-gray-400 mb-6">Haz clic y rellena el formulario en menos de 1 minuto.</p>
+        <button
+          data-tally-open="wbv9K7"
+          data-tally-emoji-text="👋"
+          data-tally-emoji-animation="wave"
+          class="bg-[#6366F1] hover:bg-[#4F46E5] text-white font-medium py-3 px-6 rounded-full transition"
+        >
+          Unirme a la beta 👋
+        </button>
+        <p class="text-sm text-gray-500 mt-4">No compartimos tus datos. Prometido 🤞</p>
+      </div>
+    </section>
+
+    <!-- CONTACTO EMPRESAS -->
+    <section id="contacto" class="py-20 px-6 bg-gray-800" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-2xl font-semibold mb-2">¿Eres una empresa interesada en colaborar?</h3>
+        <p class="text-gray-400 mb-6">
+          Estamos desarrollando un nuevo canal para entender el comportamiento financiero joven. Escríbenos para conocer más.
+        </p>
+        <a href="mailto:contacto@altoplataforma.com" class="inline-block bg-[#6366F1] text-white py-2 px-6 rounded-full hover:bg-[#4F46E5] transition">
+          Contactar
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#020617] py-10 px-6 text-center text-gray-500 text-sm">
+      <p>
+        © <span id="year"></span> Proyecto Alto. Todos los derechos reservados.
+        · <a href="#" class="underline hover:text-white">Política de privacidad</a>
+      </p>
+    </footer>
+
+    <!-- AOS INIT + INTRO SCRIPT -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Parallax Effect
+      const parallaxBackground = document.getElementById("parallax-background");
+      window.addEventListener("scroll", () => {
+        const offset = window.pageYOffset;
+        parallaxBackground.style.transform = `translateY(${offset * 1.4}px)`;
+      });
+
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          const intro = document.getElementById("intro");
+          intro.classList.add("opacity-0", "transition-opacity", "duration-1000");
+          setTimeout(() => intro.remove(), 1000);
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>
